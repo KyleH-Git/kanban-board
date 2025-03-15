@@ -23,12 +23,13 @@ header {
     text-align: center;
     color: var(--off-white-color);
 }
+
 main{
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 50px;
-    border: solid 2px rgb(255, 255, 255);
+    border: solid 2px var(--off-white-color);
     width: 100%;
     height: 800px;
 }
@@ -41,20 +42,72 @@ main{
     color: white;
     font-size: 24px;
     border-radius: 8px;
-    border: solid rgb(255, 255, 255) 2px;
+    border: solid 2px var(--off-white-color);
 }
 
 .postBtn:hover {
     cursor: pointer;
     background-color: lightblue;
-    color: rgb(255, 255, 255);
+    color: black;
+    border: solid 2px black;
     transition: all 0.2s ease-in
 }
 
+.post-modal {
+    width: 20%;
+    height: 200px;
+    border: solid 2px var(--off-white-color);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: var(--off-white-color);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-error{
+    width: 80%;
+    margin: 0 auto;
+    border: solid 2px red;
+    background-color: pink;
+    color: black;
+    text-align: center;
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+label,
+.radio-container,
+form > button {
+    padding: 4px;
+}
+
+input {
+    padding: 2px;
+}
+
+form > div {
+    padding: 4px;
+    margin: 4px;
+}
 .card-container {
     width: 25%;
     height: 90%;
-    border: solid rgb(255, 255, 255) 2px;
+    border: solid 2px var(--off-white-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -64,7 +117,7 @@ main{
 }
 
 .card-header {
-    border-bottom: solid rgb(255, 255, 255) 2px;
+    border-bottom: solid 2px var(--off-white-color);
     width: 100%;
     height: 50px;
     margin-bottom: 10px;
@@ -84,4 +137,8 @@ main{
 
 .done-header {
     background-color: green;
+}
+
+.card-body {
+    width: 100%;
 }

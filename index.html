@@ -12,9 +12,32 @@
         <h1>Kanban Board</h1>
     </header>
         <button class="postBtn">New To-do</button>
-        <div class="post-modal hidden">
-            <div class="modal-header"></div>
-            <form></form>
+        <div class="post-modal">
+            <div class="modal-error">Please enter a task name!</div>
+            <form>
+                <label for="postTitle">Task:</label>
+                <input type="text" id="postTitle" name="postTitle">
+                <label for="postBody">Description</label>
+                <input type="textarea" id="postBody" name="postBody">
+                <div class="radio-container">
+                    <label for="postTodo">
+                        <input type="radio" id="postTodo" name="status" value="todo" checked>
+                        To-do
+                    </label>
+                    <label for="postWorking">
+                        <input type="radio" id="postWorking" name="status" value="working">
+                        Working
+                    </label>
+                    <label for="postDone">
+                        <input type="radio" id="postDone" name="status" value="done"> 
+                        Done
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="submitBtn">Submit</button>
+                    <button type="button" class="cancelBtn">Cancel</button>
+                </div>
+            </form>
         </div>
     <main>
         <div class="todo card-container">
